@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kegiatan Pengabdian - Senat Mengabdi</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="subpage-body">
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <div class="logo-placeholder-nav">
+          <img src="../assets/logo senat mengabdi.png" alt="Logo Senat Mengabdi">
+        </div>
+        <h1 class="logo-text">Senat Mengabdi 2026</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="desa.html">Profil Desa</a></li>
+        <li class="active"><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="peta.html">Peta</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-subpage fade-in">
+    <section class="content-section kegiatan-header-section" style="margin-bottom: 20px;">
+      <div class="section-title" style="margin-bottom: 0;">
+        <h2>KEGIATAN PROGRAM UTAMA</h2>
+        <p style="color: var(--text-muted); margin-top: 6px;">Eksplorasi seluruh program kerja Senat Mengabdi mahasiswa FPIPS UPI di Desa Mekarsari.</p>
+      </div>
+    </section>
+
+    <section class="content-section" style="margin-bottom: 35px;">
+      <div class="navigation-tabs-wrapper" style="width: 100%; margin-bottom: 25px; border-bottom: 2px solid #e2e8f0;">
+        <div style="display: flex; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; margin-bottom: -2px;">
+          <button class="divisi-tab-btn active" onclick="switchDivisiProgram('sosmas')" id="tab-sosmas"
+            style="flex: 1; min-width: 140px; padding: 14px 15px; background: transparent; color: #2a9d8f; border: none; border-bottom: 3px solid #2a9d8f; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Sosial Masyarakat
+          </button>
+          <button class="divisi-tab-btn" onclick="switchDivisiProgram('pendidikan')" id="tab-pendidikan"
+            style="flex: 1; min-width: 140px; padding: 14px 15px; background: transparent; color: #64748b; border: none; border-bottom: 3px solid transparent; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Pendidikan
+          </button>
+          <button class="divisi-tab-btn" onclick="switchDivisiProgram('lingkungan')" id="tab-lingkungan"
+            style="flex: 1; min-width: 140px; padding: 14px 15px; background: transparent; color: #64748b; border: none; border-bottom: 3px solid transparent; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Lingkungan
+          </button>
+        </div>
+      </div>
+
+      <div style="background: transparent; padding: 5px 0;">
+        <div style="margin-bottom: 15px;">
+          <h3 id="judulDivisiTerpilih" style="margin: 0; font-size: 18px; color: #333; font-weight: 700;">Detail Program: Sosial Masyarakat</h3>
+        </div>
+
+        <div style="position: relative; overflow: hidden; width: 100%;">
+          <div id="divisiActivitySlider" style="display: flex; gap: 16px; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding: 10px 5px;">
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="main-subpage" style="padding-top: 0;">
+    
+    <div class="divisi-card">
+      <h3 class="divisi-card-title">Sosial Masyarakat</h3>
+
+      <div class="kegiatan-items">
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Seru-Seruan Bareng Warga (Fun Games)</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel1">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3796.JPG" alt="Seru-Seruan 1">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3793.JPG" alt="Seru-Seruan 2">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3827.JPG" alt="Seru-Seruan 3">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3832.JPG" alt="Seru-Seruan 4">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3845.JPG" alt="Seru-Seruan 5">
+                <img src="../assets/DAY 1/FUNGAMES/DSC_0061.JPG" alt="Seru-Seruan 6">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3864.JPG" alt="Seru-Seruan 7">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3871.JPG" alt="Seru-Seruan 8">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3805.JPG" alt="Seru-Seruan 9">
+                <img src="../assets/DAY 1/FUNGAMES/IMG_3850.JPG" alt="Seru-Seruan 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel1', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel1', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots1"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Sosialisasi Kesehatan dan Medical Check Up</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel2">
+                <img src="../assets/DAY 2/MCU/IMG_3969.JPG" alt="Kesehatan 1">
+                <img src="../assets/DAY 2/MCU/IMG_3940.JPG" alt="Kesehatan 2"> 
+                <img src="../assets/DAY 2/MCU/IMG_3998.JPG" alt="Kesehatan 3"> 
+                <img src="../assets/DAY 2/MCU/IMG_3962.JPG" alt="Kesehatan 4"> 
+                <img src="../assets/DAY 2/MCU/IMG_4021.JPG" alt="Kesehatan 5">   
+                <img src="../assets/DAY 2/MCU/IMG_3998.JPG" alt="Kesehatan 6"> 
+                <img src="../assets/DAY 2/MCU/IMG_4014.JPG" alt="Kesehatan 7">
+                <img src="../assets/DAY 2/MCU/IMG_3948.JPG" alt="Kesehatan 8"> 
+                <img src="../assets/DAY 2/MCU/IMG_3942.JPG" alt="Kesehatan 9"> 
+                <img src="../assets/DAY 2/MCU/IMG_3973.JPG" alt="Kesehatan 10"> 
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel2', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel2', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots2"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Malam Puncak Keakraban</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel3">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9502.JPG" alt="Malam Puncak 1">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9510.JPG" alt="Malam Puncak 2">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9541.JPG" alt="Malam Puncak 3">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9538.JPG" alt="Malam Puncak 4">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9554.JPG" alt="Malam Puncak 5">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9566.JPG" alt="Malam Puncak 6">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9490.JPG" alt="Malam Puncak 7">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9376.JPG" alt="Malam Puncak 8">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9402.JPG" alt="Malam Puncak 9">
+                <img src="..\assets\DAY 3\Malam Puncak\_ANA9576.JPG" alt="Malam Puncak 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel3', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel3', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots3"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Senam Sehat Pagi Bersama Warga</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel4">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9088.JPG" alt="Senam Pagi 1">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9074.JPG" alt="Senam Pagi 2">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9122.JPG" alt="Senam Pagi 3">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9065.JPG" alt="Senam Pagi 4">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9077.JPG" alt="Senam Pagi 5">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9087.JPG" alt="Senam Pagi 6">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9112.JPG" alt="Senam Pagi 7">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9082.JPG" alt="Senam Pagi 8">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9091.JPG" alt="Senam Pagi 9">
+                <img src="..\assets\DAY 3\Senam Pagi\_ANA9103.JPG" alt="Senam Pagi 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel4', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel4', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots4"></div>
+          </div>
+        </div>
+        
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Pemaparan Hasil Akhir Senat Mengabdi</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel9">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9806.JPG" alt="Pemaparan Hasil Akhir 1">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9782.JPG" alt="Pemaparan Hasil Akhir 2">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9773.JPG" alt="Pemaparan Hasil Akhir 3">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9763.JPG" alt="Pemaparan Hasil Akhir 4">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9740.JPG" alt="Pemaparan Hasil Akhir 5">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9747.JPG" alt="Pemaparan Hasil Akhir 6">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9774.JPG" alt="Pemaparan Hasil Akhir 7">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9784.JPG" alt="Pemaparan Hasil Akhir 8">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9786.JPG" alt="Pemaparan Hasil Akhir 9">
+                <img src="..\assets\DAY 4\PEMAPARAN SENAT MENGABDI\_ANA9741.JPG" alt="Pemaparan Hasil Akhir 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel9', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel9', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots9"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div class="divisi-card">
+      <h3 class="divisi-card-title">Pendidikan</h3>
+    
+      <div class="kegiatan-items">
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Edukasi Siaga Bencana dan Cap Tangan Harapan</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel11">
+                <img src="..\assets\DAY 3\Edukasi Bencana\IMG_4614.JPG" alt="Edukasi Bencana 1">
+                <img src="..\assets\DAY 3\Edukasi Bencana\IMG_4554.JPG" alt="Edukasi Bencana 2">
+                <img src="..\assets\DAY 3\Edukasi Bencana\_ANA9129.JPG" alt="Edukasi Bencana 3">
+                <img src="..\assets\DAY 3\Edukasi Bencana\IMG_4588.JPG" alt="Edukasi Bencana 4">
+                <img src="..\assets\DAY 3\Edukasi Bencana\IMG_4603.JPG" alt="Edukasi Bencana 5">
+                <img src="..\assets\DAY 3\Edukasi Bencana\IMG_4513.JPG" alt="Edukasi Bencana 6">
+                <img src="..\assets\DAY 3\Edukasi Bencana\IMG_4629.JPG" alt="Edukasi Bencana 7">
+                <img src="..\assets\DAY 3\Edukasi Bencana\_ANA9140.JPG" alt="Edukasi Bencana 8">
+                <img src="..\assets\DAY 3\Edukasi Bencana\_ANA9152.JPG" alt="Edukasi Bencana 9">
+                <img src="..\assets\DAY 3\Edukasi Bencana\_ANA9166.JPG" alt="Edukasi Bencana 10">
+                <img src="..\assets\DAY 3\Edukasi Bencana\_ANA9208.JPG" alt="Edukasi Bencana 11">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel11', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel11', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots11"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Pembelajaran Aqidah Akhlak & Keagamaan</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel12">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8760.JPG" alt="Aqidah 1">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8770.JPG" alt="Aqidah 2">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8762.JPG" alt="Aqidah 3">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8779.JPG" alt="Aqidah 4">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8771.JPG" alt="Aqidah 5">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8751.JPG" alt="Aqidah 6">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8753.JPG" alt="Aqidah 7">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8768.JPG" alt="Aqidah 8">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8783.JPG" alt="Aqidah 9">
+                <img src="..\assets\DAY 1\PENGAJIAN\_ANA8764.JPG" alt="Aqidah 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel12', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel12', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots12"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Ngaji dan Nonton Bareng Kisah Bahtera Nabi Nuh</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel13">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA8982.JPG" alt="Ngaji dan Nonton 1">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9003.JPG" alt="Ngaji dan Nonton 2">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9016.JPG" alt="Ngaji dan Nonton 3">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9038.JPG" alt="Ngaji dan Nonton 4">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9008.JPG" alt="Ngaji dan Nonton 5">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9005.JPG" alt="Ngaji dan Nonton 6">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9042.JPG" alt="Ngaji dan Nonton 7">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA8995.JPG" alt="Ngaji dan Nonton 8">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9026.JPG" alt="Ngaji dan Nonton 9">
+                <img src="..\assets\DAY 2\BAHTERA NABINUH\_ANA9060.JPG" alt="Ngaji dan Nonton 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel13', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel13', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots13"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Sosialisasi dan Sharing Bersama Tenaga Pendidik Setempat</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel14">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9363.JPG" alt="Sosialisasi Tenaga Pendidik 1">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9323.JPG" alt="Sosialisasi Tenaga Pendidik 2">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9297.JPG" alt="Sosialisasi Tenaga Pendidik 3">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9243.JPG" alt="Sosialisasi Tenaga Pendidik 4">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9271.JPG" alt="Sosialisasi Tenaga Pendidik 5">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9324.JPG" alt="Sosialisasi Tenaga Pendidik 6">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9301.JPG" alt="Sosialisasi Tenaga Pendidik 7">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9242.JPG" alt="Sosialisasi Tenaga Pendidik 8">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9263.JPG" alt="Sosialisasi Tenaga Pendidik 9">
+                <img src="..\assets\DAY 3\Tenaga Pendidikan\_ANA9366.JPG" alt="Sosialisasi Tenaga Pendidik 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel14', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel14', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots14"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divisi-card">
+      <h3 class="divisi-card-title">Lingkungan</h3>
+      
+      <div class="kegiatan-items">
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Sosialisasi Pengelolaan Sampah Mandiri</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel6">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3789.JPG" alt="Sosialisasi Sampah 1">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3734.JPG" alt="Sosialisasi Sampah 2">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3747.JPG" alt="Sosialisasi Sampah 3">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3748.JPG" alt="Sosialisasi Sampah 4">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3751.JPG" alt="Sosialisasi Sampah 5">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3775.JPG" alt="Sosialisasi Sampah 6">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3772.JPG" alt="Sosialisasi Sampah 7">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3780.JPG" alt="Sosialisasi Sampah 8">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3769.JPG" alt="Sosialisasi Sampah 9">
+                <img src="..\assets\DAY 1\SAMPAH\IMG_3791.JPG" alt="Sosialisasi Sampah 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel6', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel6', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots6"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Simulasi Mitigasi Bencana Kebakaran Bersama Damkar</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel7">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4236.JPG" alt="Mitigasi Bencana 1">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4087.JPG" alt="Mitigasi Bencana 2">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4055.JPG" alt="Mitigasi Bencana 3">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4227.JPG" alt="Mitigasi Bencana 4">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4234.JPG" alt="Mitigasi Bencana 5">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4161.JPG" alt="Mitigasi Bencana 6">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4144.JPG" alt="Mitigasi Bencana 7">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4196.JPG" alt="Mitigasi Bencana 8">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4222.JPG" alt="Mitigasi Bencana 9">
+                <img src="..\assets\DAY 2\MITIGASI BENCANA\IMG_4181.JPG" alt="Mitigasi Bencana 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel7', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel7', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots7"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Aksi Penghijauan (Reboisasi) dan Pemberian Bibit Pohon</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel8">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8847.JPG" alt="Reboisasi 1">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8912.JPG" alt="Reboisasi 2">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8916.JPG" alt="Reboisasi 3">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8890.JPG" alt="Reboisasi 4">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8922.JPG" alt="Reboisasi 5">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8810.JPG" alt="Reboisasi 6">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8913.JPG" alt="Reboisasi 7">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8829.JPG" alt="Reboisasi 8">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8872.JPG" alt="Reboisasi 9">
+                <img src="..\assets\DAY 2\REBOISASI\_ANA8821.JPG" alt="Reboisasi 10">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel8', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel8', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots8"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Kerja Bakti Bersama Seluruh Panitia</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel5">
+                <img src="..\assets\DAY 4\KERJA BAKTI\_ANA9716.JPG" alt="Peta 1">
+                <img src="..\assets\DAY 4\KERJA BAKTI\IMG_4818.JPG" alt="Peta 2">
+                <img src="..\assets\DAY 4\KERJA BAKTI\IMG_4838.JPG" alt="Peta 3">
+                <img src="..\assets\DAY 4\KERJA BAKTI\_ANA9711.JPG" alt="Peta 4">
+                <img src="..\assets\DAY 4\KERJA BAKTI\IMG_4898.JPG" alt="Peta 5">
+                <img src="..\assets\DAY 4\KERJA BAKTI\_ANA9705.JPG" alt="Peta 1">
+                <img src="..\assets\DAY 4\KERJA BAKTI\IMG_4743.JPG" alt="Peta 2">
+                <img src="..\assets\DAY 4\KERJA BAKTI\IMG_4793.JPG" alt="Peta 3">
+                <img src="..\assets\DAY 4\KERJA BAKTI\_ANA9689.JPG" alt="Peta 4">
+                <img src="..\assets\DAY 4\KERJA BAKTI\IMG_4852.JPG" alt="Peta 5">
+                <img src="..\assets\DAY 4\KERJA BAKTI\_ANA9839.JPG" alt="Peta 4">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel5', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel5', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots5"></div>
+          </div>
+        </div>
+
+        <div class="activity-card-white">
+          <h4 class="activity-subtitle">Peresmian Peta Desa & Pemasangan Plang Peta</h4>
+          <div class="carousel-container">
+            <div class="carousel-wrapper" style="height: 450px;">
+              <div class="carousel-slides" id="carousel21">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4699.JPG" alt="Peta 1">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4685.JPG" alt="Peta 2">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4662.JPG" alt="Peta 3">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4691.JPG" alt="Peta 4">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4700.JPG" alt="Peta 5">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4699.JPG" alt="Peta 1">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\IMG_4685.JPG" alt="Peta 2">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\_ANA9822.JPG" alt="Peta 3">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\_ANA9812.JPG" alt="Peta 3">
+                <img src="..\assets\DAY 3\Pembuatan Plang Peta\_ANA9816.JPG" alt="Peta 4">
+                <img src="..\assets\DAY 3\PEMAPARAN SENAT MENGABDI\_ANA9786.JPG" alt="Peta 5">
+              </div>
+              <button class="carousel-nav carousel-prev" onclick="slideKegiatan('carousel21', -1)">❮</button>
+              <button class="carousel-nav carousel-next" onclick="slideKegiatan('carousel21', 1)">❯</button>
+            </div>
+            <div class="carousel-dots" id="dots21"></div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; margin-top: 40px; margin-bottom: 20px;">
+      
+      <div class="divisi-card-small">
+        <div class="divisi-title-box">DIVISI SOSIAL MASYARAKAT</div>
+        <div class="carousel-container">
+          <div class="carousel-wrapper" style="height: 240px;">
+            <div class="carousel-slides" id="galeriSosmas">
+              <img src="..\assets\\DIVISI\\SOSMAS\\WhatsApp Image 2026-06-16 at 10.15.37.jpeg" alt="Sosmas 1">
+              <img src="..\assets\\DIVISI\\SOSMAS\\WhatsApp Image 2026-06-16 at 10.16.23.jpeg" alt="Sosmas 2">
+              <img src="..\assets\\DIVISI\\SOSMAS\\WhatsApp Image 2026-06-16 at 10.17.46.jpeg" alt="Sosmas 3">
+            </div>
+            <button class="carousel-nav carousel-prev" onclick="slideKegiatan('galeriSosmas', -1)">❮</button>
+            <button class="carousel-nav carousel-next" onclick="slideKegiatan('galeriSosmas', 1)">❯</button>
+          </div>
+          <div class="carousel-dots" id="dotsGaleriSosmas"></div>
+        </div>
+      </div>
+
+      <div class="divisi-card-small">
+        <div class="divisi-title-box">DIVISI PENDIDIKAN</div>
+        <div class="carousel-container">
+          <div class="carousel-wrapper" style="height: 240px;">
+            <div class="carousel-slides" id="galeriPendidikan">
+              <img src="..\assets\\DIVISI\\PENDIDIKAN\\WhatsApp Image 2026-06-16 at 12.00.13.jpeg" alt="Pendidikan 1">
+              <img src="..\assets\\DIVISI\\PENDIDIKAN\\WhatsApp Image 2026-06-16 at 12.00.14.jpeg" alt="Pendidikan 2">
+              <img src="..\assets\\DIVISI\\PENDIDIKAN\\WhatsApp Image 2026-06-16 at 12.00.14 (1).jpeg" alt="Pendidikan 3">
+              <img src="..\assets\\DIVISI\\PENDIDIKAN\\WhatsApp Image 2026-06-16 at 12.00.14 (2).jpeg" alt="Pendidikan 4">
+            </div>
+            <button class="carousel-nav carousel-prev" onclick="slideKegiatan('galeriPendidikan', -1)">❮</button>
+            <button class="carousel-nav carousel-next" onclick="slideKegiatan('galeriPendidikan', 1)">❯</button>
+          </div>
+          <div class="carousel-dots" id="dotsGaleriPendidikan"></div>
+        </div>
+      </div>
+
+      <div class="divisi-card-small">
+        <div class="divisi-title-box">DIVISI LINGKUNGAN</div>
+        <div class="carousel-container">
+          <div class="carousel-wrapper" style="height: 240px;">
+            <div class="carousel-slides" id="galeriLingkungan">
+              <img src="..\assets\DIVISI\LINGKUNGAN\WhatsApp Image 2026-06-16 at 08.56.06.jpeg" alt="Lingkungan 1">
+              <img src="..\assets\DIVISI\LINGKUNGAN\WhatsApp Image 2026-06-16 at 08.56.09.jpeg" alt="Lingkungan 2">
+              <img src="..\assets\DIVISI\LINGKUNGAN\WhatsApp Image 2026-06-16 at 08.56.08.jpeg" alt="Lingkungan 3">
+              <img src="..\assets\DIVISI\LINGKUNGAN\WhatsApp Image 2026-06-16 at 08.56.16.jpeg" alt="Lingkungan 4">
+              <img src="..\assets\DIVISI\LINGKUNGAN\WhatsApp Image 2026-06-16 at 08.56.17.jpeg" alt="Lingkungan 5">
+            </div>
+            <button class="carousel-nav carousel-prev" onclick="slideKegiatan('galeriLingkungan', -1)">❮</button>
+            <button class="carousel-nav carousel-next" onclick="slideKegiatan('galeriLingkungan', 1)">❯</button>
+          </div>
+          <div class="carousel-dots" id="dotsGaleriLingkungan"></div>
+        </div>
+      </div>
+
+    </div> 
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-white-badge">
+        <div class="badge-row">
+          <img src="../assets/LOGO BPO SENAT FPIPS UPI.png" alt="Logo FPIPS">
+          <div class="badge-text">
+            <h4>BPO Senat FPIPS</h4>
+            <p>Fakultas Pendidikan Ilmu Pengetahuan Sosial</p>
+          </div>
+        </div>
+        <div class="badge-row">
+          <img src="../assets/logoupimerah.png" alt="Logo UPI Merah" class="upi-size">
+          <div class="badge-text">
+            <h4>Universitas Pendidikan Indonesia</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-meta-outside">
+        <p>Portal integrasi data spasial geografi dan pelaporan program kerja nyata kewilayahan Desa Mekarsari, Ciwidey.</p>
+      </div>
+
+      <div class="badge-cp-right">
+        <div class="badge-cp-item">
+          <span>Contact Person:</span>
+          <a href="https://instagram.com/fpipsupibersatu" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> @fpipsupibersatu
+          </a>
+        </div>
+        <div class="badge-cp-item">
+          <a href="https://instagram.com/senat_mengabdi" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> @senat_mengabdi
+          </a>
+        </div>
+        <div class="badge-cp-item" style="margin-top: 4px;">
+          <a href="https://wa.me/6285158551791" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom-copyright-dark">
+        © 2026 WEBGIS Desa Mekarsari | Divisi Lingkungan Senat Mengabdi 2026
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // DATA PROGRAM UNTUK KOTAK CAROUSEL ASPEK DIVISI
+    const programDivisiData = {
+      sosmas: {
+        title: "Detail Program: Sosial Masyarakat",
+        activities: [
+          { name: "Fun Games Bersama Warga", desc: "Aktivitas interaktif guna mempererat antar panitia pengabdian mahasiswa dengan anak anak RW 8 dan RW 9 lewat serangkaian permainan edukasi lapangan." },
+          { name: "Sosialisasi Kesehatan dan Medical Check Up", desc: "Pemeriksaan kesehatan gratis penunjang tingkat kesejahteraan masyarakat kewilayahan diiringi pemaparan preventif pola hidup bersih sehat." },
+          { name: "Malam Puncak 1 Muharram", desc: "Panggung apresiasi budaya sekaligus wadah ramah tamah penutupan malam kebersamaan kolektif seluruh elemen mahasiswa FPIPS UPI bersama warga." },
+          { name: "Senam Sehat Pagi", desc: "Aksi kebugaran jasmani bersama untuk memicu antusiasme aktivitas produktif di pagi hari." },
+          { name: "Pemaparan Hasil Akhir Senat Mengabdi", desc: "Pertanggungjawaban terbuka ekspos luaran program kerja pengabdian di hadapan perangkat birokrasi pemerintahan Desa Mekarsari." }
+        ]
+      },
+      pendidikan: {
+        title: "Detail Program: Pendidikan",
+        activities: [
+          { name: "Edukasi Siaga Bencana dan Cap Tangan Harapan", desc: "Penanaman kesadaran risiko spasial wilayah rawan bencana sejak dini kepada siswa sekolah disertai pengumpulan cap motivasi untuk para siswa." },
+          { name: "Pembelajaran Aqidah Akhlak & Mengaji", desc: "Pembinaan karakter religius and moralitas dasar untuk anak anak yang islami di madrasah tempat pengajian anak setempat." },
+          { name: "Ngaji dan Nonton Bareng Kisah Bahtera Nabi Nuh", desc: "Metode edukasi multimedia kreatif berbasis visualisasi kisah sejarah nabawi guna memicu atensi belajar dan menjadi keteladanan bagi anak-anak." },
+          { name: "Sosialisasi dan Sharing Bersama Tenaga Pendidik", desc: "Forum diskusi interaktif tukar pikiran mengenai pemecahan masalah tantangan fasilitas pengajaran konvensional di pedesaan." }
+        ]
+      },
+      lingkungan: {
+        title: "Detail Program: Lingkungan",
+        activities: [
+          { name: "Sosialisasi Pengelolaan Sampah", desc: "Pemberian materi taktis pemilahan sampah organik dan non-organik skala rumah tangga dan praktik pemsangan pipa biopori unutuk sampah organik." },
+          { name: "Simulasi Mitigasi Bencana Kebakaran Bersama Damkar", desc: "Praktik simulasi lapangan penanganan kebocoran gas and teknik pemadaman api mula taktis yang berkolaborasi langsung dengan tim pemadam kebakaran." },
+          { name: "Aksi Reboisasi dan Pemberian Bibit Pohon", desc: "Reboisasi vegetasi tutupan lahan dengan bibit mahoni di RW 8 Desa Mekarsari, Kecamatan Pasirjambu, Kabupaten Bandung." },
+          { name: "Kerja Bakti Bersama Seluruh Panitia", desc: "Aksi gotong royong pembersihan sarana prasarana fasilitas publik wilayah RW di Desa Mekarsari demi menjaga keasrian sirkulasi ruang beralur." },
+          { name: "Peresmian Peta Desa & Pemasangan Plang Peta", desc: "Pemasangan plang infrastruktur spasial kartografis hasil olah data SIG sebagai pemandu batas zonasi potensi and tata ruang kewilayahan desa." }
+        ]
+      }
+    };
+
+    function switchDivisiProgram(key) {
+      const data = programDivisiData[key];
+      if (!data) return;
+
+      document.getElementById('judulDivisiTerpilih').innerText = data.title;
+
+      // Update status visual tombol tab menu
+      const buttons = document.querySelectorAll('.divisi-tab-btn');
+      buttons.forEach(btn => {
+        if (btn.id === `tab-${key}`) {
+          btn.classList.add('active');
+          btn.style.color = "#2a9d8f";
+          btn.style.borderBottom = "3px solid #2a9d8f";
+        } else {
+          btn.classList.remove('active');
+          btn.style.color = "#64748b";
+          btn.style.borderBottom = "3px solid transparent";
+        }
+      });
+
+      // Update slider item kotak penjelasan program kerja
+      const sliderContainer = document.getElementById('divisiActivitySlider');
+      sliderContainer.innerHTML = '';
+
+      data.activities.forEach(act => {
+        const card = document.createElement('div');
+        card.style.flex = "0 0 280px";
+        card.style.background = "#fff";
+        card.style.border = "1px solid #e2e8f0";
+        card.style.borderRadius = "10px";
+        card.style.padding = "16px";
+        card.style.boxShadow = "0 2px 4px rgba(0,0,0,0.02)";
+        card.style.display = "flex";
+        card.style.flexDirection = "column";
+        card.style.gap = "8px";
+
+        card.innerHTML = `
+          <h4 style="margin:0; font-size:14px; color:#2a9d8f; font-weight:700; line-height:1.4;">${act.name}</h4>
+          <p style="margin:0; font-size:12px; color:#475569; line-height:1.5; text-align:justify;">${act.desc}</p>
+        `;
+        sliderContainer.appendChild(card);
+      });
+    }
+
+    const indeksKegiatan = {};
+    const timerKegiatan = {};
+    const durasiPindah = 4000; // Putar otomatis tiap 4 detik
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inisialisasi program kerja bawaan di awal
+      switchDivisiProgram('sosmas');
+
+      const listIdCarousel = [
+        'carousel1', 'carousel2', 'carousel3', 'carousel4', 
+        'carousel5', 'carousel6', 'carousel7', 'carousel8', 'carousel9',
+        'carousel11', 'carousel12', 'carousel13', 'carousel14', 'carousel21',
+        'galeriSosmas', 'galeriPendidikan', 'galeriLingkungan'
+      ];
+      
+      listIdCarousel.forEach((id) => {
+        let dotsId = '';
+        if (id.startsWith('galeri')) {
+          dotsId = 'dots' + id.charAt(0).toUpperCase() + id.slice(1);
+        } else {
+          dotsId = id.replace('carousel', 'dots');
+        }
+        initMesinKegiatan(id, dotsId);
+      });
+    });
+
+    function initMesinKegiatan(carouselId, dotsId) {
+      const wrapper = document.getElementById(carouselId);
+      const wadahDots = document.getElementById(dotsId);
+      if (!wrapper || !wadahDots) return;
+
+      const fotoDaftar = wrapper.querySelectorAll('img');
+      indeksKegiatan[carouselId] = 0;
+      wadahDots.innerHTML = ''; 
+
+      fotoDaftar.forEach((_, index) => {
+        const bulatan = document.createElement('span');
+        bulatan.className = 'dot ' + (index === 0 ? 'active' : '');
+        bulatan.onclick = () => {
+          lompatKeSlide(carouselId, dotsId, index);
+          resetIntervalOtomatis(carouselId, dotsId);
+        };
+        wadahDots.appendChild(bulatan);
+      });
+
+      eksekusiGeser(carouselId, dotsId, 0);
+      jalankanIntervalOtomatis(carouselId, dotsId);
+    }
+
+    function jalankanIntervalOtomatis(carouselId, dotsId) {
+      timerKegiatan[carouselId] = setInterval(() => {
+        const wrapper = document.getElementById(carouselId);
+        if (!wrapper) return;
+        const fotoDaftar = wrapper.querySelectorAll('img');
+        let idxSekarang = indeksKegiatan[carouselId] || 0;
+        
+        idxSekarang = (idxSekarang + 1) % fotoDaftar.length;
+        lompatKeSlide(carouselId, dotsId, idxSekarang);
+      }, durasiPindah);
+    }
+
+    function resetIntervalOtomatis(carouselId, dotsId) {
+      clearInterval(timerKegiatan[carouselId]);
+      jalankanIntervalOtomatis(carouselId, dotsId);
+    }
+
+    function slideKegiatan(carouselId, arah) {
+      const wrapper = document.getElementById(carouselId);
+      if (!wrapper) return;
+
+      const fotoDaftar = wrapper.querySelectorAll('img');
+      let idxSekarang = indeksKegiatan[carouselId] || 0;
+
+      idxSekarang += arah;
+      if (idxSekarang >= fotoDaftar.length) idxSekarang = 0;
+      if (idxSekarang < 0) idxSekarang = fotoDaftar.length - 1;
+
+      let dotsId = '';
+      if (carouselId.startsWith('galeri')) {
+        dotsId = 'dots' + carouselId.charAt(0).toUpperCase() + carouselId.slice(1);
+      } else {
+        const nomorId = carouselId.replace('carousel', '');
+        dotsId = 'dots' + nomorId;
+      }
+
+      lompatKeSlide(carouselId, dotsId, idxSekarang);
+      resetIntervalOtomatis(carouselId, dotsId);
+    }
+
+    function lompatKeSlide(carouselId, dotsId, index) {
+      indeksKegiatan[carouselId] = index;
+      eksekusiGeser(carouselId, dotsId, index);
+    }
+
+    function eksekusiGeser(carouselId, dotsId, index) {
+      const wrapper = document.getElementById(carouselId);
+      const wadahDots = document.getElementById(dotsId);
+      if (!wrapper || !wadahDots) return;
+
+      wrapper.style.transform = `translateX(-${index * 100}%)`;
+
+      const titikBulat = wadahDots.querySelectorAll('.dot');
+      titikBulat.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+</body>
+</html>

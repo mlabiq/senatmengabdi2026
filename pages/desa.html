@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Desa Mekarsari</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="subpage-body bg-profil">
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <div class="logo-placeholder-nav">
+          <img src="../assets/logo senat mengabdi.png" alt="Logo Senat Mengabdi">
+        </div>
+        <h1 class="logo-text">Senat Mengabdi 2026</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li class="active"><a href="desa.html">Profil Desa</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li><a href="peta.html">Peta</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-subpage fade-in">
+    <section class="content-section">
+      <div class="section-title">
+        <h2>Profil Desa Mekarsari</h2>
+        <p>Mengenal lebih dekat sejarah, geografi, dan gambaran umum wilayah Desa Mekarsari.</p>
+      </div>
+<div class="village-overview" style="display: flex; gap: 30px; margin-bottom: 30px; align-items: center; flex-wrap: wrap;">
+        <div class="overview-image" style="flex: 1; min-width: 300px;">
+          <img src="../assets/kantordesa.jpg" alt="Gambaran Desa Mekarsari" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); object-fit: cover; height: 230px;">
+        </div>
+        <div class="overview-text" style="flex: 1.5; min-width: 300px;">
+          <h3 style="margin-top: 0; margin-bottom: 10px; color: #333;"><i class="fa-solid fa-mountain-sun"></i> Gambaran Umum Desa</h3>
+          <p style="line-height: 1.55; text-align: justify; font-size: 13.5px; margin: 0;">
+            Desa Mekarsari merupakan salah satu wilayah administratif di kawasan Ciwidey, Kabupaten Bandung, yang sejak pembentukannya dikenal memiliki bentang alam khas dataran tinggi vulkanik subur serta pemandangan asri dengan iklim sejuk. Secara astronomis dan geografis, karakteristik spasial desa ini didominasi oleh rona hijau berupa hamparan perkebunan teh yang luas, ladang hortikultura, dan kawasan tutupan vegetasi alami yang menjaga fungsi hidrologis hulu wilayah, sekaligus menghadirkan tantangan topografi berbukit dalam analisis kebencanaan maupun pengembangan kewilayahan. Integrasi spasial tersebut tercermin dari pola permukiman penduduk yang tertata dinamis mengikuti jaringan jalan dan morfologi lereng, menciptakan harmonisasi antara aktivitas sosial-ekonomi pertanian masyarakat lokal dengan kelestarian ekosistem lingkungan di sekitarnya.
+          </p>
+        </div>
+      </div>
+
+    <section class="content-section" style="margin-top: 30px; margin-bottom: 40px;">
+      
+      <div class="navigation-tabs-wrapper" style="width: 100%; margin-bottom: 25px; border-bottom: 2px solid #e2e8f0;">
+        <div id="aspekSliderWrapper" style="display: flex; overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; margin-bottom: -2px;">
+          
+          <button class="aspek-nav-btn active" onclick="switchAspekDemografi('mataPencaharian')" 
+            style="flex: 1; min-width: 150px; padding: 14px 15px; background: transparent; color: #2a9d8f; border: none; border-bottom: 3px solid #2a9d8f; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Mata Pencaharian
+          </button>
+          
+          <button class="aspek-nav-btn" onclick="switchAspekDemografi('pendidikan')" 
+            style="flex: 1; min-width: 150px; padding: 14px 15px; background: transparent; color: #64748b; border: none; border-bottom: 3px solid transparent; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Tingkat Pendidikan
+          </button>
+          
+          <button class="aspek-nav-btn" onclick="switchAspekDemografi('usia')" 
+            style="flex: 1; min-width: 150px; padding: 14px 15px; background: transparent; color: #64748b; border: none; border-bottom: 3px solid transparent; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Kelompok Usia
+          </button>
+          
+          <button class="aspek-nav-btn" onclick="switchAspekDemografi('jenisKelamin')" 
+            style="flex: 1; min-width: 150px; padding: 14px 15px; background: transparent; color: #64748b; border: none; border-bottom: 3px solid transparent; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; text-align: center;">
+            Jenis Kelamin
+          </button>
+
+        </div>
+      </div>
+
+      <div class="data-display-clean" style="background: transparent; padding: 5px 0;">
+        
+        <div style="margin-bottom: 25px;">
+          <h3 id="judulAspekTerpilih" style="margin: 0; font-size: 19px; color: #333; font-weight: 700;">Data Aspek: Mata Pencaharian</h3>
+          <p style="margin: 6px 0 0 0; font-size: 12.5px; color: #64748b; display: flex; align-items: center; gap: 6px;">
+            <i class="fa-regular fa-clock" style="color: #94a3b8;"></i> Update Terakhir: 03 Oktober 2025
+          </p>
+        </div>
+        
+        <div class="chart-box" style="max-width: 280px; margin: 0 auto 30px auto; height: 280px; position: relative;">
+          <canvas id="demografiPieChart"></canvas>
+        </div>
+
+        <div class="table-box" style="overflow-x: auto; border: 1px solid #e2e8f0; border-radius: 8px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+          <table id="tabelDemografi" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+            <thead>
+              <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;">
+                <th style="padding: 12px 14px; color: #475569; font-weight: 600;">Kelompok / Kategori</th>
+                <th style="padding: 12px 14px; color: #475569; font-weight: 600; text-align: right;">Laki-laki (n)</th>
+                <th style="padding: 12px 14px; color: #475569; font-weight: 600; text-align: right;">Perempuan (n)</th>
+                <th style="padding: 12px 14px; color: #475569; font-weight: 600; text-align: right;">Total Jumlah</th>
+                <th style="padding: 12px 14px; color: #475569; font-weight: 600; text-align: right;">Persentase (%)</th>
+              </tr>
+            </thead>
+            <tbody id="bodyTabelDemografi" style="color: #334155;">
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // DATASET ASLI SESUAI SCREENSHOT DOKUMEN RESMI 03 OKTOBER 2025
+    const datasetDemografi = {
+      mataPencaharian: {
+        title: "Data Aspek: Mata Pencaharian",
+        labels: ["Pelajar/Mahasiswa", "Belum/Tidak Bekerja", "Pensiunan", "Mengurus Rumah Tangga", "PNS", "Perdagangan", "TNI/Polri", "Petani/Peternak", "Belum Mengisi"],
+        dataLaki: [1495, 840, 788, 477, 496, 50, 14, 6, 4],
+        dataPerempuan: [1710, 732, 722, 454, 364, 27, 18, 3, 0],
+        totalCount: [3210, 1577, 1513, 933, 864, 77, 32, 9, 35],
+        percentages: ["38.89%", "19.10%", "18.33%", "11.30%", "10.47%", "0.93%", "0.39%", "0.11%", "0.42%"],
+        colors: ["#2a9d8f", "#e9c46a", "#f4a261", "#e76f51", "#3b82f6", "#a78bfa", "#10b981", "#ff7300", "#94a3b8"]
+      },
+      pendidikan: {
+        title: "Data Aspek: Tingkat Pendidikan",
+        labels: ["Tamat SD / Sederajat", "Tidak / Belum Sekolah", "SLTP / Sederajat", "SLTA / Sederajat", "Belum Tamat SD", "Diploma I / II / III", "Strata I / II / III", "Belum Mengisi"],
+        dataLaki: [1486, 1219, 765, 480, 76, 14, 57, 73],
+        dataPerempuan: [1688, 1067, 714, 360, 74, 17, 29, 81],
+        totalCount: [3190, 2312, 1486, 845, 150, 31, 86, 154],
+        percentages: ["38.64%", "28.01%", "18.00%", "10.24%", "1.82%", "0.39%", "1.04%", "1.87%"],
+        colors: ["#3b82f6", "#60a5fa", "#93c5fd", "#1d4ed8", "#34d399", "#8b5cf6", "#6366f1", "#cbd5e1"]
+      },
+      usia: {
+        title: "Data Aspek: Kelompok Usia",
+        labels: ["5 s/d 9 Tahun", "10 s/d 14 Tahun", "15 s/d 19 Tahun", "20 s/d 24 Tahun", "25 s/d 29 Tahun", "30 s/d 34 Tahun", "35 s/d 39 Tahun", "40 s/d 44 Tahun", "45 s/d 49 Tahun", "50 s/d 54 Tahun"],
+        dataLaki: [62, 308, 350, 419, 357, 339, 381, 321, 322, 318],
+        dataPerempuan: [63, 262, 312, 360, 355, 426, 330, 344, 334, 286],
+        totalCount: [125, 571, 667, 787, 714, 774, 712, 673, 663, 605],
+        percentages: ["1.51%", "6.92%", "8.08%", "9.53%", "8.65%", "9.38%", "8.63%", "8.15%", "8.03%", "7.33%"],
+        colors: ["#4f46e5", "#06b6d4", "#10b981", "#f59e0b", "#ef4444", "#ec4899", "#8b5cf6", "#14b8a6", "#f43f5e", "#64748b"]
+      },
+      jenisKelamin: {
+        title: "Data Aspek: Jenis Kelamin",
+        labels: ["Laki-Laki", "Perempuan", "Belum Mengisi"],
+        dataLaki: [4170, 0, 0],
+        dataPerempuan: [0, 4029, 0],
+        totalCount: [4170, 4029, 56],
+        percentages: ["50.51%", "48.81%", "0.68%"],
+        colors: ["#06b6d4", "#ec4899", "#94a3b8"]
+      }
+    };
+
+    let currentChartInstance = null;
+
+    function switchAspekDemografi(key) {
+      const targetData = datasetDemografi[key];
+      if (!targetData) return;
+
+      document.getElementById('judulAspekTerpilih').innerText = targetData.title;
+
+      const buttons = document.querySelectorAll('.aspek-nav-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('onclick').includes(key)) {
+          btn.classList.add('active');
+          btn.style.color = "#2a9d8f";
+          btn.style.borderBottom = "3px solid #2a9d8f";
+        } else {
+          btn.classList.remove('active');
+          btn.style.color = "#64748b";
+          btn.style.borderBottom = "3px solid transparent";
+        }
+      });
+
+      const tbody = document.getElementById('bodyTabelDemografi');
+      tbody.innerHTML = '';
+      
+      targetData.labels.forEach((label, index) => {
+        const lk = targetData.dataLaki[index];
+        const pr = targetData.dataPerempuan[index];
+        const tot = targetData.totalCount[index];
+        const pct = targetData.percentages[index];
+        
+        const tr = document.createElement('tr');
+        tr.style.borderBottom = "1px solid #f1f5f9";
+        tr.innerHTML = `
+          <td style="padding: 12px 14px; font-weight: 500;">${label}</td>
+          <td style="padding: 12px 14px; text-align: right;">${lk.toLocaleString('id-ID')}</td>
+          <td style="padding: 12px 14px; text-align: right;">${pr.toLocaleString('id-ID')}</td>
+          <td style="padding: 12px 14px; text-align: right; font-weight: 600;">${tot.toLocaleString('id-ID')}</td>
+          <td style="padding: 12px 14px; text-align: right; color: #2a9d8f; font-weight: 600;">${pct}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      const ctx = document.getElementById('demografiPieChart').getContext('2d');
+      if (currentChartInstance) {
+        currentChartInstance.destroy();
+      }
+
+      currentChartInstance = new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: targetData.labels,
+          datasets: [{
+            data: targetData.totalCount,
+            backgroundColor: targetData.colors,
+            borderWidth: 1,
+            borderColor: '#ffffff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                boxWidth: 10,
+                padding: 12,
+                font: { size: 11, weight: '500' }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      switchAspekDemografi('mataPencaharian');
+    });
+  </script>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-white-badge">
+        <div class="badge-row">
+          <img src="../assets/LOGO BPO SENAT FPIPS UPI.png" alt="Logo FPIPS">
+          <div class="badge-text">
+            <h4>BPO Senat FPIPS</h4>
+            <p>Fakultas Pendidikan Ilmu Pengetahuan Sosial</p>
+          </div>
+        </div>
+        <div class="badge-row">
+          <img src="../assets/logoupimerah.png" alt="Logo UPI Merah" class="upi-size">
+          <div class="badge-text">
+            <h4>Universitas Pendidikan Indonesia</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-meta-outside">
+        <p>Portal integrasi data spasial geografi dan pelaporan program kerja nyata kewilayahan Desa Mekarsari, Ciwidey.</p>
+      </div>
+
+      <div class="badge-cp-right">
+        <div class="badge-cp-item">
+          <span>Contact Person:</span>
+          <a href="https://instagram.com/fpipsupibersatu" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> @fpipsupibersatu
+          </a>
+        </div>
+        <div class="badge-cp-item">
+          <a href="https://instagram.com/senat_mengabdi" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> @senat_mengabdi
+          </a>
+        </div>
+        <div class="badge-cp-item" style="margin-top: 4px;">
+          <a href="https://wa.me/6285158551791" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom-copyright-dark">
+        © 2026 WEBGIS Desa Mekarsari | Divisi Lingkungan Senat Mengabdi 2026
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

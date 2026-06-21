@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Desa Mekarsari</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="subpage-body">
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-area">
+        <div class="logo-placeholder-nav">
+          <img src="../assets/logo senat mengabdi.png" alt="Logo Senat Mengabdi">
+        </div>
+        <h1 class="logo-text">Senat Mengabdi 2026</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="beranda.html">Beranda</a></li>
+        <li><a href="desa.html">Profil Desa</a></li>
+        <li><a href="kegiatan.html">Kegiatan</a></li>
+        <li class="active"><a href="peta.html">Peta</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header></header> <main class="main-subpage fade-in">
+<section class="content-section">
+      <div class="section-title">
+        <h2>Peta Wilayah Desa Mekarsari</h2>
+        <p>Sistem Informasi Geografis interaktif pemetaan potensi dan infrastruktur desa.</p>
+      </div>
+
+      <div class="map-layout-container" style="display: flex; gap: 20px; width: 100%; height: 550px; align-items: stretch; margin-bottom: 30px; overflow: hidden;">
+        
+        <div style="flex: 1; height: 100%; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; position: relative;">
+          <div id="map" style="width: 100%; height: 100%;"></div>
+        </div>
+
+        <div class="custom-legend-panel" style="width: 320px; height: 100%; display: flex; flex-direction: column; overflow: hidden; margin-top: 0; border: 1px solid #e2e8f0; border-radius: 12px; background: #fff;">
+          <div class="legend-header" style="padding: 15px; border-bottom: 1px solid #e2e8f0;">
+            <h3 style="margin: 0; font-size: 16px; color: #ffffff;"><i class="fa-solid fa-layer-group"></i> Kontrol Layer</h3>
+            <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b;">Pilih data untuk ditampilkan di peta</p>
+          </div>
+          
+          <div class="legend-body" style="flex: 1; overflow-y: auto; padding: 15px;">
+            <div class="legend-group" style="margin-bottom: 20px;">
+              <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px;">Data Tematik Spasial</h4>
+              <div id="dynamic-tematik-layers" style="display: flex; flex-direction: column; gap: 8px;">
+              </div>
+            </div>
+
+            <div class="legend-group">
+              <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px;">Peta Dasar (Base Map)</h4>
+              <label class="control-item">
+                <input type="radio" name="basemap" value="light" checked onchange="switchBaseMap(this.value)">
+                <span class="custom-radio"></span> Basemap Terang
+              </label>
+              <label class="control-item">
+                <input type="radio" name="basemap" value="osm" onchange="switchBaseMap(this.value)">
+                <span class="custom-radio"></span> OpenStreetMap
+              </label>
+              <label class="control-item">
+                <input type="radio" name="basemap" value="satellite" onchange="switchBaseMap(this.value)">
+                <span class="custom-radio"></span> Google Satellite
+              </label>
+              <label class="control-item">
+                <input type="radio" name="basemap" value="dark" onchange="switchBaseMap(this.value)">
+                <span class="custom-radio"></span> Basemap Gelap
+              </label>
+              <label class="control-item">
+                <input type="radio" name="basemap" value="hillshade" onchange="switchBaseMap(this.value)">
+                <span class="custom-radio"></span> Hillshade Topografi
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-display" id="weatherDisplay">
+        <div class="weather-container">
+          <div class="weather-header">
+            <h3>Cuaca Desa Mekarsari</h3>
+            <span class="weather-time" id="weatherTime"></span>
+          </div>
+          
+          <div class="weather-grid">
+            <div class="weather-card temperature-card">
+              <div class="weather-icon">
+                <svg class="weather-svg" id="tempIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2v8m0 8v2M12 2a3 3 0 00-3 3v5a5 5 0 0010 0V5a3 3 0 00-3-3z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="weather-info">
+                <p class="weather-label">Suhu</p>
+                <p class="weather-value" id="temperature">--°C</p>
+              </div>
+            </div>
+
+            <div class="weather-card condition-card">
+              <div class="weather-icon">
+                <svg class="weather-svg" id="conditionIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="5"/>
+                  <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m6.08 0l4.24-4.24M1 12h6m6 0h6M4.22 19.78l4.24-4.24m6.08 0l4.24 4.24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="weather-info">
+                <p class="weather-label">Kondisi</p>
+                <p class="weather-value" id="condition">--</p>
+              </div>
+            </div>
+
+            <div class="weather-card humidity-card">
+              <div class="weather-icon">
+                <svg class="weather-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 2c-5.5 0-9 4.5-9 9 0 4.5 4.5 9 9 9s9-4.5 9-9c0-4.5-3.5-9-9-9z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 6v6l3 3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="weather-info">
+                <p class="weather-label">Kelembaban</p>
+                <p class="weather-value" id="humidity">--%</p>
+              </div>
+            </div>
+
+            <div class="weather-card wind-card">
+              <div class="weather-icon">
+                <svg class="weather-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M5 10h14M3 6h12m-8 8h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="20" cy="14" r="2"/>
+                </svg>
+              </div>
+              <div class="weather-info">
+                <p class="weather-label">Kecepatan Angin</p>
+                <p class="weather-value" id="windSpeed">-- km/h</p>
+              </div>
+            </div>
+
+            <div class="weather-card uv-card">
+              <div class="weather-icon">
+                <svg class="weather-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="5" stroke-width="2"/>
+                  <line x1="12" y1="1" x2="12" y2="3" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="12" y1="21" x2="12" y2="23" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="1" y1="12" x2="3" y2="12" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="21" y1="12" x2="23" y2="12" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="weather-info">
+                <p class="weather-label">Indeks UV</p>
+                <p class="weather-value" id="uvIndex">--</p>
+              </div>
+            </div>
+
+            <div class="weather-card visibility-card">
+              <div class="weather-icon">
+                <svg class="weather-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 5C7 5 2.73 8.11 1 12.46c1.73 4.35 6 7.54 11 7.54s9.27-3.19 11-7.54C21.27 8.11 17 5 12 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="weather-info">
+                <p class="weather-label">Jarak Pandang</p>
+                <p class="weather-value" id="visibility">-- m</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-white-badge">
+        <div class="badge-row">
+          <img src="../assets/LOGO BPO SENAT FPIPS UPI.png" alt="Logo FPIPS">
+          <div class="badge-text">
+            <h4>BPO Senat FPIPS</h4>
+            <p>Fakultas Pendidikan Ilmu Pengetahuan Sosial</p>
+          </div>
+        </div>
+        <div class="badge-row">
+          <img src="../assets/logoupimerah.png" alt="Logo UPI Merah" class="upi-size">
+          <div class="badge-text">
+            <h4>Universitas Pendidikan Indonesia</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-meta-outside">
+        <p>Portal integrasi data spasial geografi dan pelaporan program kerja nyata kewilayahan Desa Mekarsari, Ciwidey.</p>
+      </div>
+
+
+     <div class="badge-cp-right">
+        <div class="badge-cp-item">
+          <span>Contact Person:</span>
+          <a href="https://instagram.com/fpipsupibersatu" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> @fpipsupibersatu
+          </a>
+        </div>
+        <div class="badge-cp-item">
+          <a href="https://instagram.com/senat_mengabdi" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> @senat_mengabdi
+          </a>
+        </div>
+        <div class="badge-cp-item">
+          <a href="https://wa.me/6285158551791" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bottom-copyright-dark">
+        © 2026 WEBGIS Desa Mekarsari | Divisi Lingkungan Senat Mengabdi 2026
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -52,7 +52,8 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+  /* KODE YANG SUDAH DIPERBAIKI DI BAWAH INI */
+  background: url('../assets/BACKGROOUND/WhatsApp Image 2026-06-16 at 12.50.19 (1).jpeg') no-repeat center center/cover;
   padding: 20px;
 }
 

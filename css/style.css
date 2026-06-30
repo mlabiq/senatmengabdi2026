@@ -1397,3 +1397,21 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
 .custom-legend-panel {
     background-color: rgba(255, 255, 255, 0.9) !important;
 }
+/* Ini setelan umum untuk laptop */
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Trik buat HP: Jika layar di bawah 768px (ukuran HP/Tablet) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Menu/kotak yang tadinya ke samping, otomatis turun ke bawah */
+    }
+    
+    img {
+        width: 100%; /* Foto otomatis mengecil sesuai lebar layar HP, gak bakal kepotong */
+        height: auto;
+    }
+}

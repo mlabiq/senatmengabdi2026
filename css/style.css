@@ -1267,23 +1267,55 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
   header {
     width: calc(100% - 16px);
     margin: 8px;
+    padding: 0;
   }
   
   .navbar {
-    padding: 12px 16px;
+    padding: 10px 12px;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .logo-area {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo-placeholder-nav img {
+    width: 32px !important;
+    height: 32px !important;
   }
   
   .logo-text {
-    font-size: 16px;
+    font-size: 14px;
+    margin-left: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .nav-links {
-    gap: 8px;
-    font-size: 12px;
+    gap: 6px;
+    font-size: 11px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-links li {
+    flex: 0 1 auto;
+  }
+  
+  .nav-links a {
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: 0.2s;
+  }
+  
+  .nav-links a:hover, .nav-links li.active a {
+    background: rgba(255, 255, 255, 0.1);
   }
   
   /* Main Content */
@@ -1381,6 +1413,77 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
     width: 45px !important;
     height: 45px !important;
   }
+  
+  /* Map Layout - Mobile */
+  .map-layout-container {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+  
+  #map {
+    height: 250px !important;
+    width: 100% !important;
+  }
+  
+  .custom-legend-panel {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .legend-body {
+    max-height: 250px;
+  }
+  
+  /* Weather Grid */
+  .weather-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .weather-card {
+    padding: 12px !important;
+  }
+  
+  .weather-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  /* Sections */
+  .gambaran-umum-box {
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 20px !important;
+  }
+  
+  .gambaran-logo-col {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  .logo-circle-inner {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  
+  .gambaran-text-col {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  .ketuplak-section-container {
+    padding: 16px !important;
+    flex-direction: column !important;
+  }
+  
+  .avatar-circle {
+    float: none !important;
+    margin-right: 0 !important;
+    margin-bottom: 16px !important;
+    width: 140px !important;
+    height: 140px !important;
+  }
 }
 
 /* ===== MOBILE LANDSCAPE & SMALL TABLET (481px - 768px) ===== */
@@ -1389,19 +1492,30 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
   header {
     width: calc(100% - 24px);
     margin: 12px;
+    padding: 0;
   }
   
   .navbar {
-    padding: 12px 20px;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .logo-area {
+    flex: 1 1 auto;
+    min-width: 150px;
   }
   
   .logo-text {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .nav-links {
-    gap: 12px;
-    font-size: 13px;
+    gap: 10px;
+    font-size: 12px;
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   /* Main Content */
@@ -1412,6 +1526,64 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
   .main-subpage {
     max-width: 100%;
     padding: 16px;
+  }
+  
+  /* Map Layout - Tablet */
+  .map-layout-container {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+  
+  #map {
+    height: 350px !important;
+    width: 100% !important;
+  }
+  
+  .custom-legend-panel {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  .legend-body {
+    max-height: 300px;
+  }
+  
+  /* Weather Grid */
+  .weather-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+  
+  /* Sections */
+  .gambaran-umum-box {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 24px !important;
+  }
+  
+  .gambaran-logo-col {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  .logo-circle-inner {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  
+  .gambaran-text-col {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  .ketuplak-section-container {
+    padding: 20px !important;
+  }
+  
+  .avatar-circle {
+    width: 160px !important;
+    height: 160px !important;
   }
   
   /* Section Layout */
@@ -1531,13 +1703,19 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
     margin: 14px;
   }
   
+  .navbar {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+  }
+  
   .logo-text {
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .nav-links {
-    gap: 14px;
+    gap: 12px;
     font-size: 13px;
+    flex-wrap: wrap;
   }
   
   /* Main Content */
@@ -1558,6 +1736,23 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
   
   .carousel-wrapper-full {
     height: 450px;
+  }
+  
+  /* Map Layout - Medium Devices */
+  .map-layout-container {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+  
+  #map {
+    height: 400px !important;
+    width: 100% !important;
+  }
+  
+  .custom-legend-panel {
+    width: 100% !important;
+    height: auto !important;
   }
   
   /* Galeri Grid */
@@ -1593,6 +1788,57 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
   /* Everything is optimized for desktop as is */
   .hero-content h2 {
     font-size: 46px;
+  }
+  
+  /* Map Layout - Desktop */
+  .map-layout-container {
+    flex-direction: row;
+    height: 600px;
+    gap: 20px;
+  }
+  
+  #map {
+    height: 100% !important;
+    flex: 1;
+  }
+  
+  .custom-legend-panel {
+    width: 320px !important;
+    height: 100% !important;
+  }
+  
+  /* Sections - Desktop */
+  .gambaran-umum-box {
+    flex-direction: row !important;
+    gap: 40px !important;
+    padding: 40px !important;
+  }
+  
+  .gambaran-logo-col {
+    flex: 1 !important;
+    min-width: 240px !important;
+  }
+  
+  .logo-circle-inner {
+    width: 220px !important;
+    height: 220px !important;
+  }
+  
+  .gambaran-text-col {
+    flex: 2.5 !important;
+    min-width: 300px !important;
+  }
+  
+  .ketuplak-section-container {
+    padding: 24px !important;
+  }
+  
+  .avatar-circle {
+    float: left !important;
+    width: 170px !important;
+    height: 170px !important;
+    margin-right: 24px !important;
+    margin-bottom: 12px !important;
   }
   
   .galeri-pure-grid {

@@ -1256,6 +1256,398 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
     @media (max-width: 600px) {
       .galeri-pure-grid { grid-template-columns: 1fr !important; }
     }
+    
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE MEDIA QUERIES FOR ALL DEVICES
+   ========================================================================== */
+
+/* ===== MOBILE PORTRAIT (320px - 480px) ===== */
+@media (max-width: 480px) {
+  /* Header & Navigation */
+  header {
+    width: calc(100% - 16px);
+    margin: 8px;
+  }
+  
+  .navbar {
+    padding: 12px 16px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+  
+  .nav-links {
+    gap: 8px;
+    font-size: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Main Content */
+  .subpage-body {
+    padding-top: 100px;
+  }
+  
+  .main-subpage {
+    padding: 12px 12px 20px 12px;
+  }
+  
+  /* Video Section */
+  .video-intro-section {
+    padding: 20px !important;
+    gap: 20px !important;
+    flex-direction: column !important;
+  }
+  
+  .video-explanation h3 {
+    font-size: 14px !important;
+  }
+  
+  .paragraph-text {
+    font-size: 12px !important;
+  }
+  
+  /* Section Titles */
+  .content-section {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .section-title h2 {
+    font-size: 18px;
+  }
+  
+  /* Carousel */
+  .carousel-wrapper {
+    height: 200px !important;
+  }
+  
+  .carousel-nav {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .slide-title-overlay {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+  
+  /* Hero */
+  .hero-content h2 {
+    font-size: 24px;
+  }
+  
+  .hero-content p {
+    font-size: 12px;
+  }
+  
+  .btn-masuk-central {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+  
+  /* Card Layouts */
+  .gambaran-umum-box {
+    padding: 16px !important;
+    gap: 16px !important;
+  }
+  
+  .logo-circle-inner {
+    width: 140px !important;
+    height: 140px !important;
+  }
+  
+  .avatar-circle {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  /* Footer */
+  .footer-container {
+    padding-right: 16px;
+    gap: 16px;
+    flex-direction: column;
+  }
+  
+  .footer-white-badge {
+    max-width: 100%;
+    border-radius: 12px 12px 12px 12px !important;
+  }
+  
+  .badge-row img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+/* ===== MOBILE LANDSCAPE & SMALL TABLET (481px - 768px) ===== */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    width: calc(100% - 24px);
+    margin: 12px;
+  }
+  
+  .navbar {
+    padding: 12px 20px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .nav-links {
+    gap: 12px;
+    font-size: 13px;
+  }
+  
+  /* Main Content */
+  .subpage-body {
+    padding-top: 110px;
+  }
+  
+  .main-subpage {
+    max-width: 100%;
+    padding: 16px;
+  }
+  
+  /* Section Layout */
+  .video-intro-section {
+    padding: 24px !important;
+    flex-direction: column !important;
+  }
+  
+  .video-container {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  .video-explanation {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  /* Carousel */
+  .carousel-wrapper {
+    height: 300px;
+  }
+  
+  .carousel-wrapper-full {
+    height: 350px;
+  }
+  
+  /* Video Desa Mega Card */
+  .mega-card-flex-container {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Gambaran Section */
+  .gambaran-umum-box {
+    padding: 24px !important;
+    flex-direction: column !important;
+  }
+  
+  .gambaran-logo-col {
+    flex: 1 !important;
+  }
+  
+  .gambaran-text-col {
+    flex: 1 !important;
+  }
+  
+  .logo-circle-inner {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  
+  /* Stats Grid */
+  .stats-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .stat-box {
+    flex: 1 !important;
+    min-width: 100% !important;
+  }
+  
+  /* Galeri Grid */
+  .galeri-pure-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .galeri-pure-grid-p2m {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  /* Map Layout */
+  .map-layout-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  #map {
+    height: 350px;
+  }
+  
+  .custom-legend-panel {
+    width: 100%;
+  }
+  
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    padding-right: 20px;
+  }
+  
+  .footer-white-badge {
+    max-width: 100%;
+  }
+  
+  .footer-meta-outside {
+    max-width: 100%;
+  }
+  
+  .badge-cp-right {
+    width: 100%;
+  }
+  
+  /* Weather Grid */
+  .weather-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== TABLET LANDSCAPE & SMALL DESKTOP (769px - 1024px) ===== */
+@media (max-width: 1024px) {
+  /* Header */
+  header {
+    width: calc(100% - 28px);
+    margin: 14px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+  }
+  
+  .nav-links {
+    gap: 14px;
+    font-size: 13px;
+  }
+  
+  /* Main Content */
+  .main-subpage {
+    max-width: 100%;
+    padding: 24px;
+  }
+  
+  /* Section Layout */
+  .video-intro-section {
+    padding: 32px !important;
+  }
+  
+  /* Carousel */
+  .carousel-wrapper {
+    height: 400px;
+  }
+  
+  .carousel-wrapper-full {
+    height: 450px;
+  }
+  
+  /* Galeri Grid */
+  .galeri-pure-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  
+  .galeri-pure-grid-p2m {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  
+  /* Hero */
+  .hero-content h2 {
+    font-size: 36px;
+  }
+  
+  /* Mega Card */
+  .mega-card-flex-container {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Weather Grid */
+  .weather-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== DESKTOP (1025px+) ===== */
+@media (min-width: 1025px) {
+  /* Everything is optimized for desktop as is */
+  .hero-content h2 {
+    font-size: 46px;
+  }
+  
+  .galeri-pure-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .galeri-pure-grid-p2m {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  
+  .weather-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== EXTRA SMALL SCREENS (< 320px) ===== */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+  
+  .logo-text {
+    display: none; /* Tampilkan hanya logo pada layar sangat kecil */
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .content-section {
+    padding: 12px;
+  }
+  
+  .carousel-wrapper {
+    height: 150px !important;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION (any resolution) ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .subpage-body {
+    padding-top: 80px;
+  }
+  
+  .carousel-wrapper {
+    height: 300px !important;
+  }
+  
+  header {
+    height: auto;
+  }
+}
     /* ==========================================================================
    STYLE LAYOUT GRID KEPANITIAN P2M (GALERI)
    ========================================================================== */

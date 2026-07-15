@@ -2054,3 +2054,252 @@ input[type="checkbox"]:checked + .custom-radio-checkbox {
         height: auto;
     }
 }
+/* ==========================================================================
+   STYLE PORTFOLIO HALAMAN UTAMA (NEW LAYOUT)
+   ========================================================================== */
+
+.portfolio-title {
+  margin-bottom: 40px;
+  animation: slideInDown 0.8s ease-out;
+}
+
+.portfolio-title h2 {
+  font-size: 72px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #ffffff 0%, #4fc3f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.greeting-section {
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease-out;
+}
+
+.greeting-text {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.name-highlight {
+  font-size: 42px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4fc3f7 0%, #64ffda 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+
+.profile-image {
+  position: relative;
+  flex-shrink: 0;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.profile-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 3px solid #4fc3f7;
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
+}
+
+.skills-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.skills-carousel-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.skill-item {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  padding: 16px 24px;
+  border-left: 4px solid #4fc3f7;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 1px;
+}
+
+.skill-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(10px);
+  box-shadow: 0 8px 24px rgba(47, 203, 233, 0.3);
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .profile-section {
+    gap: 40px;
+  }
+
+  .profile-image img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .portfolio-title h2 {
+    font-size: 56px;
+  }
+
+  .greeting-text {
+    font-size: 36px;
+  }
+
+  .name-highlight {
+    font-size: 32px;
+  }
+
+  .skill-item {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skills-carousel,
+  .skills-carousel-right {
+    width: 100%;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .portfolio-title h2 {
+    font-size: 42px;
+  }
+
+  .greeting-text {
+    font-size: 28px;
+  }
+
+  .name-highlight {
+    font-size: 24px;
+  }
+
+  .skill-item {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section {
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .portfolio-title h2 {
+    font-size: 32px;
+  }
+
+  .greeting-text {
+    font-size: 22px;
+  }
+
+  .name-highlight {
+    font-size: 20px;
+  }
+
+  .profile-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .skill-item {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
